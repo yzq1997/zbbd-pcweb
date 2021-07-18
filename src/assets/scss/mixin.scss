@@ -1,0 +1,31 @@
+@charset "utf-8";
+@import "./variable";/*引入配置*/
+
+@mixin border_color($color){/*通过该函数设置主题边框颜色；*/
+    border-color: $color;   
+    [data-theme="theme1"] & {
+      border-color:$border-color-theme; 
+    }
+    [data-theme="theme2"] & {
+      border-color: $border-color-theme1; 
+    }
+  }
+
+@mixin bg_color($color){/*通过该函数设置单选按钮背景颜色；*/
+    background-color: $color;   
+   [data-theme="theme1"] & {
+    background-color:$border-color-theme;
+   }
+   [data-theme="theme2"] & {
+    background-color:$border-color-theme1;
+   }
+}
+@mixin bg_color_rgba($color){/*通过该函数设置主题背景颜色；*/
+    background-color: $color;   
+  [data-theme="theme1"] & {
+    background-color:$background-color-theme;
+  }
+  [data-theme="theme2"] & {
+    background-color:$background-color-theme1;
+  }
+}
